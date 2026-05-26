@@ -1,0 +1,128 @@
+{
+  "id": "9f3b81d2-6c4a-4e57-8d31-b46c00a7b2e8",
+  "quoteNumber": 89523,
+  "status": 3,
+  "statusName": "Quoted",
+  "type": 1,
+  "typeName": "Moving",
+  "createdAt": "2026-05-04T15:22:18Z",
+  "updatedAt": "2026-05-06T11:14:42Z",
+  "serviceDate": 20260515,
+  "moveSize": "3 Bedrooms",
+  "moveSizeId": "3br",
+  "branch": {
+    "id": "b00959a6-0f04-4069-ae11-af2001415fd9",
+    "name": "Royal Moving LA"
+  },
+  "tariff": {
+    "id": "rmc-la-local-2026",
+    "name": "RMC Los Angeles"
+  },
+  "customer": {
+    "id": "c82b3f91-47d5-4c19-a04e-b46c00a7b2e9",
+    "firstName": "Maria",
+    "lastName": "Sample",
+    "phoneNumber": "+13105557294",
+    "emailAddress": "maria.sample@example.com"
+  },
+  "salesPerson": {
+    "id": "u-lukas-002",
+    "name": "Lukas Reyes",
+    "email": "lukas@royalmovingco.example"
+  },
+  "leadSource": {
+    "name": "Yelp"
+  },
+  "tags": [],
+  "estimatedTotal": 4985.0,
+  "subtotal": 4985.0,
+  "discount": 0.0,
+  "salesTax": 0.0,
+  "jobs": [
+    {
+      "id": "j-913c7a45-f2e1-4b08-9a76-b46c00a7b2eb",
+      "jobNumber": "89523-1",
+      "type": 1,
+      "typeName": "Moving",
+      "serviceDate": 20260515,
+      "confirmed": false,
+      "scheduled": false,
+      "arrivalWindow": "7:00 AM - 8:00 AM",
+      "estimatedDuration": "7h",
+      "crewSize": 4,
+      "truckCount": 1,
+      "estimatedCharges": 4985.0,
+      "stops": [
+        {
+          "order": 1,
+          "type": "Origin",
+          "addressFullAddress": "3825 Verdugo Vista Terrace, Los Angeles, CA 90065",
+          "addressUnit": null,
+          "propertyType": 2,
+          "propertyTypeName": "House",
+          "stairs": 0,
+          "hasElevator": false,
+          "parkingDescription": "Driveway",
+          "notes": ""
+        },
+        {
+          "order": 2,
+          "type": "Destination",
+          "addressFullAddress": "1455 East Walnut Street, Pasadena, CA 91106",
+          "addressUnit": "Unit 5",
+          "propertyType": 1,
+          "propertyTypeName": "Apartment",
+          "stairs": 0,
+          "hasElevator": true,
+          "parkingDescription": "Building garage, loading zone in front",
+          "notes": ""
+        }
+      ],
+      "notes": {
+        "internalNotes": "Lead from Yelp 5/4. 3BR house in Eagle Rock to apartment in Pasadena. Quote sent 5/6 via email. Awaiting customer response. Customer mentioned husband needs to review.",
+        "customerNotes": "Hi Maria, please find your quote attached. Total estimated at $4,985 for the May 15 move. Reply to confirm and we'll lock in the date.",
+        "crewNotes": "",
+        "crewFeedback": "",
+        "dispatcherNotes": "",
+        "accountingNotes": ""
+      },
+      "charges": [
+        { "name": "Moving Labor", "rate": "7h @ $239/hr (1 truck, 4 crew)", "subtotal": 1673.0, "discount": 0.0, "totalCost": 1673.0 },
+        { "name": "Travel Fee", "rate": "Flat", "subtotal": 95.0, "discount": 0.0, "totalCost": 95.0 },
+        { "name": "Long Carry / Distance", "rate": "Estimated", "subtotal": 240.0, "discount": 0.0, "totalCost": 240.0 },
+        { "name": "Materials & Packing Supplies", "rate": "Partial pack — kitchen and fragiles", "subtotal": 420.0, "discount": 0.0, "totalCost": 420.0 },
+        { "name": "Full Value Protection", "rate": "Standard", "subtotal": 297.0, "discount": 0.0, "totalCost": 297.0 },
+        { "name": "Disposal Fee", "rate": "Estimated", "subtotal": 60.0, "discount": 0.0, "totalCost": 60.0 },
+        { "name": "Double Drive Time (DDT)", "rate": "Per CPUC", "subtotal": 0.0, "discount": 0.0, "totalCost": 0.0 },
+        { "name": "Overtime Rate (after 8 hours)", "rate": "1.5x per hour", "subtotal": 0.0, "discount": 0.0, "totalCost": 0.0 },
+        { "name": "Heavy Items Fee", "rate": "Per item over 300 lbs", "subtotal": 0.0, "discount": 0.0, "totalCost": 0.0 },
+        { "name": "Estimated Move Day Total", "rate": "", "subtotal": 4985.0, "discount": 0.0, "totalCost": 4985.0 }
+      ],
+      "inventory": {
+        "totalVolumeCuFt": 1450,
+        "totalWeightLbs": 9425,
+        "rooms": [
+          { "name": "Living Room", "itemCount": 12 },
+          { "name": "Master Bedroom", "itemCount": 8 },
+          { "name": "Bedroom 2", "itemCount": 6 },
+          { "name": "Bedroom 3", "itemCount": 5 },
+          { "name": "Kitchen", "itemCount": 14 },
+          { "name": "Dining Room", "itemCount": 4 },
+          { "name": "Garage", "itemCount": 9 }
+        ],
+        "items": [
+          { "name": "Sofa, 3-seater", "quantity": 1, "estimatedWeightLbs": 110 },
+          { "name": "Loveseat", "quantity": 1, "estimatedWeightLbs": 75 },
+          { "name": "Coffee table", "quantity": 1, "estimatedWeightLbs": 45 },
+          { "name": "TV, 65 inch", "quantity": 1, "estimatedWeightLbs": 60 },
+          { "name": "Bed frame, king", "quantity": 1, "estimatedWeightLbs": 95 },
+          { "name": "Mattress, king", "quantity": 1, "estimatedWeightLbs": 80 },
+          { "name": "Dresser, 6-drawer", "quantity": 1, "estimatedWeightLbs": 130 },
+          { "name": "Dining table", "quantity": 1, "estimatedWeightLbs": 85 },
+          { "name": "Dining chairs", "quantity": 6, "estimatedWeightLbs": 18 },
+          { "name": "Refrigerator", "quantity": 1, "estimatedWeightLbs": 285 }
+        ]
+      }
+    }
+  ]
+}

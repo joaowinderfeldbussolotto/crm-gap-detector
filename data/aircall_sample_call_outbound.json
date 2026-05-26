@@ -1,0 +1,90 @@
+{
+  "id": 1748518723,
+  "direct_link": "https://api.aircall.io/v1/calls/1748518723",
+  "direction": "outbound",
+  "status": "done",
+  "missed_call_reason": null,
+  "started_at": 1746651600,
+  "answered_at": 1746651612,
+  "ended_at": 1746652143,
+  "duration": 543,
+  "voicemail": null,
+  "archived": false,
+  "cost": "0.38",
+  "number": {
+    "id": 901234,
+    "name": "Royal Moving LA Sales Outbound",
+    "digits": "+13105550100",
+    "country": "US"
+  },
+  "user": {
+    "id": 887623,
+    "name": "Lukas Reyes",
+    "email": "lukas@royalmovingco.example",
+    "available": true
+  },
+  "contact": {
+    "id": 4523471,
+    "first_name": "Maria",
+    "last_name": "Sample",
+    "company_name": null,
+    "phone_numbers": [
+      {
+        "label": "Mobile",
+        "value": "+13105557294"
+      }
+    ],
+    "emails": [
+      {
+        "label": "Personal",
+        "value": "maria.sample@example.com"
+      }
+    ]
+  },
+  "raw_digits": "+13105557294",
+  "asset": "https://aircall-recordings.example.com/recordings/1748518723.mp3",
+  "recording": "https://aircall-recordings.example.com/recordings/1748518723.mp3",
+  "transcription": {
+    "id": 998923,
+    "call_id": 1748518723,
+    "language": "en-US",
+    "created_at": 1746652210,
+    "content": {
+      "channels": [
+        {
+          "speaker": "agent",
+          "name": "Lukas Reyes"
+        },
+        {
+          "speaker": "external",
+          "name": "Maria Sample"
+        }
+      ],
+      "utterances": [
+        { "start": 1.4, "end": 4.2, "speaker": "agent", "text": "Hi, is this Maria? This is Lukas from Royal Moving, how are you?" },
+        { "start": 4.8, "end": 8.5, "speaker": "external", "text": "Oh hi Lukas, yes it's me. I'm good, just busy with all this packing." },
+        { "start": 9.0, "end": 18.6, "speaker": "agent", "text": "I bet. I'm calling because I sent you the quote on Tuesday for your move on the 15th, and I just wanted to follow up to see if you had any questions or if you're ready to book." },
+        { "start": 19.2, "end": 32.8, "speaker": "external", "text": "Yes, actually, my husband and I were going to call you back today. We talked it over and we want to go ahead and book. But there are a few changes since the quote. Some things we need to add or change." },
+        { "start": 33.4, "end": 36.1, "speaker": "agent", "text": "Of course, no problem. What changes do we need to make?" },
+        { "start": 36.7, "end": 51.4, "speaker": "external", "text": "Okay so first, the destination address is different. We were going to move to the place in Pasadena but the deal fell through. We're moving to Glendale instead. The new address is 847 North Brand Boulevard, unit 12B. It's a condo." },
+        { "start": 52.0, "end": 56.8, "speaker": "agent", "text": "Got it, 847 North Brand Boulevard, unit 12B in Glendale. Let me update that. Is it a high-rise?" },
+        { "start": 57.4, "end": 68.2, "speaker": "external", "text": "Yeah it's on the 12th floor. There's an elevator obviously, but the HOA requires us to pay a $400 elevator deposit and we have to schedule the freight elevator. They only allow moves Monday through Friday between 9 am and 4 pm." },
+        { "start": 68.8, "end": 75.6, "speaker": "agent", "text": "Okay so weekdays only, 9 to 4. The 15th is a Friday so we should be okay there. Let me note the elevator deposit." },
+        { "start": 76.3, "end": 89.4, "speaker": "external", "text": "Right. The other thing, I forgot to mention before, but we have a baby grand piano. It's been in the family for years. It's at the origin in our living room. I know that's a big deal so I wanted to make sure you knew." },
+        { "start": 90.0, "end": 96.8, "speaker": "agent", "text": "Yes, definitely a big deal — a baby grand. We absolutely move pianos, but we'll need to send a specialist crew. Do you know roughly how heavy it is?" },
+        { "start": 97.4, "end": 103.2, "speaker": "external", "text": "I think baby grands are around 600 pounds? Maybe more? It's a Yamaha." },
+        { "start": 103.8, "end": 114.5, "speaker": "agent", "text": "Around 600, that sounds right for a baby grand. There will be an additional fee for piano handling, since it's over 300 pounds. I'll add that to the updated quote and send it over." },
+        { "start": 115.1, "end": 119.4, "speaker": "external", "text": "Okay that's fine. We expected something like that." },
+        { "start": 120.0, "end": 124.6, "speaker": "agent", "text": "Great. Anything else changing? Same arrival window, 7 to 8 am at the origin?" },
+        { "start": 125.2, "end": 138.7, "speaker": "external", "text": "Actually that's the other thing. Can we make it a little later? Like 9 or 10 am? My daughter has a soccer game in the morning we want to drop her off at first. She has it at 7:30." },
+        { "start": 139.3, "end": 145.8, "speaker": "agent", "text": "Sure, we can shift it to 10 to 11 am arrival window. I'll update that. Just so the crew has time to finish in the elevator window at the destination." },
+        { "start": 146.4, "end": 154.2, "speaker": "external", "text": "Yeah that should still work. Oh, and one more thing, I'm allergic to dogs, so if any of the movers want to bring a service dog or anything, please don't." },
+        { "start": 154.8, "end": 159.6, "speaker": "agent", "text": "We don't bring animals to jobs, so that won't be an issue. But noted." },
+        { "start": 160.2, "end": 174.4, "speaker": "external", "text": "Perfect. So can you send me the updated quote? And I want to confirm, you guys take Zelle right? Because the credit card fee you mentioned, three percent, on a five thousand dollar move, that's like a hundred fifty dollars. I'd rather just do Zelle." },
+        { "start": 175.0, "end": 184.8, "speaker": "agent", "text": "Yes, we accept Zelle. We can definitely do that. I'll send the updated quote within the hour with the new destination, the piano fee, and the new arrival window. Sound good?" },
+        { "start": 185.4, "end": 188.1, "speaker": "external", "text": "Yes, perfect. Thanks Lukas." },
+        { "start": 188.6, "end": 191.3, "speaker": "agent", "text": "Thank you Maria, talk soon." }
+      ]
+    }
+  }
+}

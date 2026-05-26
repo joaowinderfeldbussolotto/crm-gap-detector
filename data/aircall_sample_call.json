@@ -1,0 +1,86 @@
+{
+  "id": 1748392051,
+  "direct_link": "https://api.aircall.io/v1/calls/1748392051",
+  "direction": "inbound",
+  "status": "done",
+  "missed_call_reason": null,
+  "started_at": 1746475200,
+  "answered_at": 1746475208,
+  "ended_at": 1746475847,
+  "duration": 647,
+  "voicemail": null,
+  "archived": false,
+  "cost": "0.42",
+  "number": {
+    "id": 901234,
+    "name": "Royal Moving LA Main Line",
+    "digits": "+13105550100",
+    "country": "US"
+  },
+  "user": {
+    "id": 887541,
+    "name": "Nicole Bennett",
+    "email": "nicole@royalmovingco.example",
+    "available": true
+  },
+  "contact": {
+    "id": 4521098,
+    "first_name": "John",
+    "last_name": "Sample",
+    "company_name": null,
+    "phone_numbers": [
+      {
+        "label": "Mobile",
+        "value": "+13235551842"
+      }
+    ],
+    "emails": [
+      {
+        "label": "Personal",
+        "value": "john.sample@example.com"
+      }
+    ]
+  },
+  "raw_digits": "+13235551842",
+  "asset": "https://aircall-recordings.example.com/recordings/1748392051.mp3",
+  "recording": "https://aircall-recordings.example.com/recordings/1748392051.mp3",
+  "transcription": {
+    "id": 998877,
+    "call_id": 1748392051,
+    "language": "en-US",
+    "created_at": 1746475920,
+    "content": {
+      "channels": [
+        {
+          "speaker": "agent",
+          "name": "Nicole Bennett"
+        },
+        {
+          "speaker": "external",
+          "name": "John Sample"
+        }
+      ],
+      "utterances": [
+        { "start": 2.1, "end": 4.8, "speaker": "agent", "text": "Thank you for calling Royal Moving, this is Nicole. How can I help you today?" },
+        { "start": 5.2, "end": 12.6, "speaker": "external", "text": "Hi Nicole, I'm calling about my move next Saturday. I have the booking already, I think the quote number is 89417, but I wanted to mention a few things that came up." },
+        { "start": 13.0, "end": 16.4, "speaker": "agent", "text": "Of course, John. Let me pull up your file. What did you want to mention?" },
+        { "start": 17.1, "end": 28.9, "speaker": "external", "text": "So first, my wife and I just realized we have this Peloton in the upstairs bedroom that we forgot to tell you about. It's the bigger one, the Bike Plus, I think it weighs around 140 pounds. Will your guys be able to handle that? Do they need to disassemble it?" },
+        { "start": 29.5, "end": 38.2, "speaker": "agent", "text": "Yes, we can definitely handle that. The crew will assess on-site whether to disassemble or move it as one piece. I'll make a note of the Peloton on the second floor." },
+        { "start": 38.8, "end": 51.4, "speaker": "external", "text": "Great, thank you. The other thing is the access at the new place. The destination address, the one in Santa Monica, the building entrance is actually around the back, not the front like Google Maps shows. There's a service entrance off the alley. The building manager said the movers have to use that one." },
+        { "start": 52.0, "end": 56.1, "speaker": "agent", "text": "Got it, service entrance off the alley. Is there anything specific the building manager wanted us to know?" },
+        { "start": 56.7, "end": 73.5, "speaker": "external", "text": "Yeah actually, two things. First, they need a Certificate of Insurance, a COI, before move-in day. They were really firm about that. They want it sent to manager@elmtowers.example.com at least 48 hours before. Second, the freight elevator has to be reserved between 10 am and 2 pm. They won't let movers use the regular elevator at all." },
+        { "start": 74.0, "end": 80.2, "speaker": "agent", "text": "Okay, so we'll need to get the COI sent over to the building manager and the freight elevator is reserved 10 to 2. I'm noting all of this." },
+        { "start": 80.9, "end": 91.6, "speaker": "external", "text": "Perfect. Oh and I forgot, my mother-in-law is going to be at the destination to let the crew in. She doesn't speak much English. She speaks Russian mainly. Just in case there's any communication issue." },
+        { "start": 92.1, "end": 96.3, "speaker": "agent", "text": "Understood, I'll let the crew lead know. We have a couple of crew members who speak some Russian." },
+        { "start": 96.9, "end": 108.4, "speaker": "external", "text": "Oh that's great. One more thing, sorry for so many things at once. We have a saltwater fish tank, it's a 75 gallon tank. We're going to drain it ourselves but the tank itself, the empty glass tank, do you guys move that? It's pretty big and heavy even when empty." },
+        { "start": 109.0, "end": 116.2, "speaker": "agent", "text": "Yes, we can move the empty tank. We'll wrap it carefully. Just make sure it's fully dry before we arrive to avoid any sloshing or weight issues." },
+        { "start": 116.8, "end": 122.5, "speaker": "external", "text": "Okay perfect. Hmm what else. The pickup is still 8 to 9 am right? At the Hollywood Hills place?" },
+        { "start": 123.0, "end": 127.4, "speaker": "agent", "text": "Yes, 8 to 9 am arrival window at the origin in Hollywood Hills, that's confirmed." },
+        { "start": 128.0, "end": 138.6, "speaker": "external", "text": "Good. Last thing, payment. The quote came out to about three thousand four hundred. We're planning to pay by credit card on the day. Is there a fee for that or is that included?" },
+        { "start": 139.1, "end": 148.9, "speaker": "agent", "text": "Credit card payment is fine, there's a small processing fee of three percent that gets added on the day of. So your final total would be slightly higher than the quote." },
+        { "start": 149.5, "end": 154.0, "speaker": "external", "text": "Okay that's fine. I think that's everything. Thank you Nicole." },
+        { "start": 154.5, "end": 158.2, "speaker": "agent", "text": "Thank you, John. We'll see you Saturday. Have a great evening." }
+      ]
+    }
+  }
+}

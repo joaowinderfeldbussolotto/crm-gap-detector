@@ -1,0 +1,107 @@
+{
+  "id": "8a4c92e1-7f3d-4b88-9c25-b45b00d8a3f1",
+  "quoteNumber": 89417,
+  "status": 4,
+  "statusName": "Booked",
+  "type": 1,
+  "typeName": "Moving",
+  "createdAt": "2026-04-22T18:14:32Z",
+  "updatedAt": "2026-05-04T14:08:51Z",
+  "serviceDate": 20260510,
+  "moveSize": "2 Bedrooms",
+  "moveSizeId": "2br",
+  "branch": {
+    "id": "b00959a6-0f04-4069-ae11-af2001415fd9",
+    "name": "Royal Moving LA"
+  },
+  "tariff": {
+    "id": "rmc-la-local-2026",
+    "name": "RMC Los Angeles"
+  },
+  "customer": {
+    "id": "c91a4d72-58e6-4a17-b02d-b42c00f9d287",
+    "firstName": "John",
+    "lastName": "Sample",
+    "phoneNumber": "+13235551842",
+    "emailAddress": "john.sample@example.com"
+  },
+  "salesPerson": {
+    "id": "u-nicole-001",
+    "name": "Nicole Bennett",
+    "email": "nicole@royalmovingco.example"
+  },
+  "leadSource": {
+    "name": "Google Search"
+  },
+  "tags": [],
+  "estimatedTotal": 3417.0,
+  "subtotal": 3417.0,
+  "discount": 0.0,
+  "salesTax": 0.0,
+  "jobs": [
+    {
+      "id": "j-892a4c12-bb74-4a10-9e3f-b45b00d8a3f4",
+      "jobNumber": "89417-1",
+      "type": 1,
+      "typeName": "Moving",
+      "serviceDate": 20260510,
+      "confirmed": true,
+      "scheduled": true,
+      "arrivalWindow": "8:00 AM - 9:00 AM",
+      "estimatedDuration": "5h",
+      "crewSize": 3,
+      "truckCount": 1,
+      "estimatedCharges": 3417.0,
+      "stops": [
+        {
+          "order": 1,
+          "type": "Origin",
+          "addressFullAddress": "2418 Beachwood Drive, Los Angeles, CA 90068",
+          "addressUnit": null,
+          "propertyType": 2,
+          "propertyTypeName": "House",
+          "stairs": 1,
+          "hasElevator": false,
+          "parkingDescription": "Driveway, two-car",
+          "notes": ""
+        },
+        {
+          "order": 2,
+          "type": "Destination",
+          "addressFullAddress": "1207 Elm Street, Santa Monica, CA 90403",
+          "addressUnit": "Unit 408",
+          "propertyType": 1,
+          "propertyTypeName": "Apartment",
+          "stairs": 0,
+          "hasElevator": true,
+          "parkingDescription": "Street parking",
+          "notes": ""
+        }
+      ],
+      "notes": {
+        "internalNotes": "Customer found us via Google. 2BR move within LA area. Booked 4/22.",
+        "customerNotes": "Hi John, thank you for choosing Royal Moving! Your move is confirmed for May 10, 8-9 AM arrival window. Please reply to confirm 24 hours before.",
+        "crewNotes": "2BR house to apartment. Standard 3-man crew, 1 truck.",
+        "crewFeedback": "",
+        "dispatcherNotes": "",
+        "accountingNotes": ""
+      },
+      "charges": [
+        { "name": "Moving Labor", "rate": "5h @ $189/hr (1 truck, 3 crew)", "subtotal": 945.0, "discount": 0.0, "totalCost": 945.0 },
+        { "name": "Travel Fee", "rate": "Flat", "subtotal": 95.0, "discount": 0.0, "totalCost": 95.0 },
+        { "name": "Materials & Packing Supplies", "rate": "Estimated", "subtotal": 180.0, "discount": 0.0, "totalCost": 180.0 },
+        { "name": "Full Value Protection", "rate": "Standard", "subtotal": 197.0, "discount": 0.0, "totalCost": 197.0 },
+        { "name": "Double Drive Time (DDT)", "rate": "Per CPUC", "subtotal": 0.0, "discount": 0.0, "totalCost": 0.0 },
+        { "name": "Overtime Rate (after 8 hours)", "rate": "1.5x per hour", "subtotal": 0.0, "discount": 0.0, "totalCost": 0.0 },
+        { "name": "Heavy Items Fee", "rate": "Per item over 300 lbs", "subtotal": 0.0, "discount": 0.0, "totalCost": 0.0 },
+        { "name": "Estimated Move Day Total", "rate": "", "subtotal": 3417.0, "discount": 0.0, "totalCost": 3417.0 }
+      ],
+      "inventory": {
+        "totalVolumeCuFt": 0,
+        "totalWeightLbs": 0,
+        "rooms": [],
+        "items": []
+      }
+    }
+  ]
+}
