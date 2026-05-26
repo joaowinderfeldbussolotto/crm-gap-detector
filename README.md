@@ -158,27 +158,31 @@ In production, using the **Anthropic Batch API** (50% discount, 24h turnaround) 
 
 ## What I Would Do Differently for Production
 
-### 1. Event Driven Pipeline
+### Pipeline and Delivery
+
+#### 1. Event Driven Pipeline
 
 The PoC reads files from disk. In production, Aircall fires a webhook when a call ends and transcription is ready. A lightweight queue (Redis/BullMQ or SQS) sits between the webhook receiver and the analysis worker. Aircall webhooks have short timeout windows and you don't want API latency blocking the acknowledgment. This gives you natural retry and dead letter handling for failed analyses.
 
-### 2. Live CRM Fetch
+#### 2. Live CRM Fetch
 
 Right now, CRM data comes from a static file. In production, the pipeline fetches the SmartMoving opportunity via API at analysis time, not from a cache, because the record may have been updated between the call and the analysis. This also surfaces a new case: no CRM record exists yet (new inbound lead), which is itself worth flagging.
 
-### 3. Batch API for Non Urgent Calls
+#### 3. Batch API for Non Urgent Calls
 
 Most moves are days or weeks away. The Anthropic Batch API gives 50% cost reduction with 24 hour turnaround. Production would batch non urgent calls nightly and reserve synchronous calls for moves within 48 hours, roughly halving the monthly API spend.
 
-### 4. Feedback Loop and Confidence Calibration
+#### 4. Feedback Loop and Confidence Calibration
 
 Confidence levels are currently uncalibrated estimates from the model. In production, salespeople see each finding and can mark it useful or a false alarm. After a few hundred labeled examples, you can measure precision and recall per category, tune the prompt accordingly, and drop categories that consistently generate noise. This is the step that turns the tool from an AI thing into a system that improves.
 
-### 5. Alert Routing and Deduplication
+#### 5. Alert Routing and Deduplication
 
 The script outputs JSON to stdout. Production needs to deliver findings to the right person via the right channel (Telegram bot, email digest, or CRM notification), grouped by opportunity rather than by call. A customer may call three times; without deduplication across calls, the salesperson gets three alerts about the same piano. A lightweight store of already surfaced findings per opportunity handles this.
 
-### 6. Observability
+### Quality, Observability, and Evals
+
+#### 6. Observability
 
 Logging prompt and response pairs is a start. Production needs a proper observability layer. Several tools fit here depending on existing infrastructure: **Langfuse** (integrates directly with the Anthropic SDK and LangChain), **LangSmith** (natural fit if the system migrates to LangChain/LangGraph), or **Datadog LLM Observability** (better choice if the team already runs Datadog for the rest of the stack). The tool matters less than what you instrument.
 
@@ -193,7 +197,7 @@ What to track per call:
 
 Prompt versions are tagged on every trace so any metric can be sliced by version, making prompt iteration safe rather than a leap of faith.
 
-### 7. Evals
+#### 7. Evals
 
 There is no ground truth data today, so a full eval suite isn't built into this PoC. But the script was deliberately designed to be evaluable when that data exists.
 
@@ -221,25 +225,39 @@ There is no ground truth data today, so a full eval suite isn't built into this 
 * For findings that don't exactly match the ground truth label, a stronger model judges whether the finding is still valid. This handles paraphrasing and equivalent findings with different wording
 * Prevents the regression suite from becoming a brittle exact match test as the prompt evolves
 
-### 8. Framework Migration if the System Becomes an Agent
+#### 8. Framework Migration if the System Becomes an Agent
 
 The PoC is a pipeline step: one prompt in, structured JSON out. This makes `instructor` the right tool. If the system evolves toward true agent behavior (autonomously fetching CRM records, deciding which calls to analyze, routing findings across Telegram/email/CRM, spawning subagents per opportunity), migrating to LangChain's `create_agent` becomes justified. At that point, `PIIMiddleware` (call transcripts contain addresses and phone numbers), `ModelFallbackMiddleware` (resilience against Anthropic outages), and `ModelRetryMiddleware` (transient API errors) are no longer over engineering, they are the right defaults for a production agent running unsupervised on thousands of calls. The Pydantic schemas defined here transfer directly to LangChain's `response_format=AnalysisResult`.
 
-### 9. Graceful Degradation
+### Resilience and Governance
+
+#### 9. Graceful Degradation
 
 API down? Rate limited? Transcription garbage? Each case needs a defined behavior: retry with backoff, queue for later, flag for human review. The pipeline should never silently drop a call. Every call gets either a result or an explicit "needs manual review" status.
 
-### 10. Transcription Quality Gating
+#### 10. Transcription Quality Gating
 
 Aircall returns per-utterance confidence scores. Low-confidence transcripts (heavy accents, poor audio) generate noisy input that produces false findings. Production should gate on average transcription confidence and route low-quality calls to human review rather than feeding them to the model.
 
-### 11. Security and Data Retention
+#### 11. Security and Data Retention
 
 Call transcripts contain PII (names, addresses, phone numbers). The pipeline needs a defined retention policy, structured logging that masks PII, and compliance with state level call recording consent laws (California two party consent, etc.).
 
-### 12. Category Config as Data
+#### 12. Category Config as Data
 
 The 12 categories and their definitions are currently hardcoded in the system prompt. In production, these would live in a config file (JSON or YAML) loaded at runtime. This lets operations staff tune category definitions and add new ones without touching code or redeploying.
+
+#### 13. Prompt Management Outside the Code
+
+Right now, the system prompt is hardcoded in the script. In production, it is usually worth decoupling prompt text from deploys so iteration is faster and safer. This can be done by storing prompts in a simple CMS, or by using a tool like Langfuse for prompt management and versioning.
+
+At minimum, the runtime should fetch a named prompt version and attach that version to every trace, so you can correlate changes in precision, token usage, and empty findings rate back to a specific prompt version.
+
+#### 14. LLM Routing and Provider Fallback
+
+If the model API fails (timeouts, rate limits, transient errors), production should have a routing strategy. This can include retry with backoff, switching to an alternate model, or switching providers, depending on your latency and cost constraints.
+
+The important part is that failures are handled deterministically and are observable. Every call should end in either a successful `AnalysisResult` or a recorded failure state that can be replayed.
 
 ## Sample Outputs
 
