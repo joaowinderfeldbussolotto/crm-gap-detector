@@ -155,6 +155,12 @@ Total:  about $5.90 per 1,000 calls, about $0.0059 per call
 
 In production, using the **Anthropic Batch API** (50% discount, 24h turnaround) would cut this to **about $2.95 per 1,000 calls** for non urgent moves. Synchronous calls are reserved only for moves within 48 hours.
 
+### Prompt Caching
+
+Claude Haiku 4.5 supports prompt caching at **$0.10 / MTok** for cache reads (10% of base input price). However, the minimum cacheable prefix is **4,096 tokens** — our current prompt of ~2,700 falls below that threshold.
+
+Caching would become viable if the system prompt grows past that threshold, reducing per-call input cost by ~64% on subsequent calls.
+
 
 ## What I Would Do Differently for Production
 
