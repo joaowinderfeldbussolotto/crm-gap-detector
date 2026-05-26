@@ -12,6 +12,7 @@ import argparse
 import json
 import os
 import sys
+from pathlib import Path
 from enum import Enum
 from typing import Literal, NamedTuple
 
@@ -319,6 +320,14 @@ def _log_token_usage(response: object) -> None:
     print(f"[tokens] input={u.input_tokens}, output={u.output_tokens}", file=sys.stderr)
 
 
+def _save_output(output: dict, aircall_path: str) -> None:
+    out_dir = Path("output")
+    out_dir.mkdir(exist_ok=True)
+    out_file = out_dir / f"{Path(aircall_path).stem}_findings.json"
+    out_file.write_text(json.dumps(output, indent=2))
+    print(f"[saved] {out_file}", file=sys.stderr)
+
+
 def analyze(
     aircall_path: str,
     smartmoving_path: str,
@@ -397,6 +406,8 @@ def main():
         args.aircall_json, args.smartmoving_json, args.dry_run, args.verbose
     )
     print(json.dumps(output, indent=2))
+    if not args.dry_run:
+        _save_output(output, args.aircall_json)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "category": "ADDRESS_CHANGE",
+      "summary": "Destination address changed from Pasadena to Glendale condo at 847 North Brand Boulevard, unit 12B.",
+      "quote": "The destination address is different. We were going to move to the place in Pasadena but the deal fell through. We're moving to Glendale instead. The new address is 847 North Brand Boulevard, unit 12B. It's a condo.",
+      "confidence": "high"
+    },
+    {
+      "category": "HEAVY_ITEMS",
+      "summary": "Customer has a baby grand piano (approximately 600 pounds) located in the living room at the origin that needs to be moved.",
+      "quote": "I forgot to mention before, but we have a baby grand piano. It's been in the family for years. It's at the origin in our living room.",
+      "confidence": "high"
+    },
+    {
+      "category": "TIMING",
+      "summary": "Arrival window changed from 7:00 AM - 8:00 AM to 10:00 AM - 11:00 AM due to daughter's soccer game at 7:30 AM.",
+      "quote": "Can we make it a little later? Like 9 or 10 am? My daughter has a soccer game in the morning we want to drop her off at first. She has it at 7:30.",
+      "confidence": "high"
+    },
+    {
+      "category": "BUILDING_MGMT",
+      "summary": "Destination building HOA requires $400 elevator deposit and restricts moves to weekdays between 9 AM and 4 PM with freight elevator scheduling required.",
+      "quote": "The HOA requires us to pay a $400 elevator deposit and we have to schedule the freight elevator. They only allow moves Monday through Friday between 9 am and 4 pm.",
+      "confidence": "high"
+    },
+    {
+      "category": "PAYMENT",
+      "summary": "Customer prefers to pay via Zelle instead of credit card to avoid the 3% processing fee.",
+      "quote": "You guys take Zelle right? Because the credit card fee you mentioned, three percent, on a five thousand dollar move, that's like a hundred fifty dollars. I'd rather just do Zelle.",
+      "confidence": "high"
+    }
+  ]
+}

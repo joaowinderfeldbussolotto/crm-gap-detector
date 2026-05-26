@@ -1,0 +1,46 @@
+{
+  "findings": [
+    {
+      "category": "HEAVY_ITEMS",
+      "summary": "Peloton Bike Plus (approximately 140 pounds) in upstairs bedroom not recorded in inventory.",
+      "quote": "So first, my wife and I just realized we have this Peloton in the upstairs bedroom that we forgot to tell you about. It's the bigger one, the Bike Plus, I think it weighs around 140 pounds.",
+      "confidence": "high"
+    },
+    {
+      "category": "ACCESS",
+      "summary": "Service entrance off the alley at destination building, not the front entrance shown on Google Maps.",
+      "quote": "The destination address, the one in Santa Monica, the building entrance is actually around the back, not the front like Google Maps shows. There's a service entrance off the alley.",
+      "confidence": "high"
+    },
+    {
+      "category": "TIMING",
+      "summary": "Freight elevator must be reserved and used between 10 am and 2 pm; regular elevator cannot be used.",
+      "quote": "Second, the freight elevator has to be reserved between 10 am and 2 pm. They won't let movers use the regular elevator at all.",
+      "confidence": "high"
+    },
+    {
+      "category": "BUILDING_MGMT",
+      "summary": "Certificate of Insurance required to be sent to manager@elmtowers.example.com at least 48 hours before move-in day.",
+      "quote": "First, they need a Certificate of Insurance, a COI, before move-in day. They were really firm about that. They want it sent to manager@elmtowers.example.com at least 48 hours before.",
+      "confidence": "high"
+    },
+    {
+      "category": "COMMUNICATION_PREFS",
+      "summary": "Mother-in-law will be at destination and primarily speaks Russian; crew should be aware of potential language barrier.",
+      "quote": "Oh and I forgot, my mother-in-law is going to be at the destination to let the crew in. She doesn't speak much English. She speaks Russian mainly.",
+      "confidence": "high"
+    },
+    {
+      "category": "SPECIAL_HANDLING",
+      "summary": "75-gallon saltwater fish tank (empty glass tank) requires careful wrapping and must be fully dry before arrival.",
+      "quote": "We have a saltwater fish tank, it's a 75 gallon tank. We're going to drain it ourselves but the tank itself, the empty glass tank, do you guys move that? It's pretty big and heavy even when empty.",
+      "confidence": "high"
+    },
+    {
+      "category": "PAYMENT",
+      "summary": "Credit card payment method with 3% processing fee to be added on move day.",
+      "quote": "Credit card payment is fine, there's a small processing fee of three percent that gets added on the day of.",
+      "confidence": "high"
+    }
+  ]
+}
